@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Payments.Api", "Payments.Api\Payments.Api.csproj", "{ADEBBAFA-B550-4356-A60D-7A4006494327}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ADEBBAFA-B550-4356-A60D-7A4006494327}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADEBBAFA-B550-4356-A60D-7A4006494327}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADEBBAFA-B550-4356-A60D-7A4006494327}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADEBBAFA-B550-4356-A60D-7A4006494327}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
