@@ -23,7 +23,15 @@ public class PaymentsController : ControllerBase
         _transactionService = transactionService;
         _clientService = clientService;
     }
-    
+
+    /// <summary>
+    ///     Gets a list of transactions for a given account
+    /// </summary>
+    /// <param name="payment">The payment to be initialized</param>
+    /// <response code="200">Successfully created the transaction.</response>
+    /// <response code="400">Bad request if parameter validation fails.</response>
+    /// <response code="401">Unauthorized if no Client ID is in the header.</response>
+    /// <response code="409">Conflict if Client ID already have a transaction running.</response>
     [HttpPost]
     public async Task<IActionResult> Get(Payment payment)
     {
@@ -31,7 +39,7 @@ public class PaymentsController : ControllerBase
 
         if (string.IsNullOrEmpty(clientId))
         {
-            return BadRequest("Client-ID is required");
+            return Unauthorized("Client-ID is required");
         }
         
         if (!ModelState.IsValid)

@@ -17,6 +17,14 @@ public class TransactionsController : ControllerBase
         _transactionService = transactionService;
     }
 
+    /// <summary>
+    ///     Gets a list of transactions for a given account
+    /// </summary>
+    /// <param name="iban">Iban of the account</param>
+    /// <returns>"History of transactions for a account"</returns>
+    /// <response code="200">Successfully fetched transactions.</response>
+    /// <response code="400">Bad request if parameter validation fails.</response>
+    /// <response code="401">Unauthorized if no Client ID is in the header.</response>
     [HttpGet("accounts/{iban}/transactions")]
     public IActionResult Get(string iban)
     {
