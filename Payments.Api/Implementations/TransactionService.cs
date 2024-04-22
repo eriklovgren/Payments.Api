@@ -14,7 +14,7 @@ public class TransactionService : ITransactionService
     
     public Task<Guid?> InitiatePayment(Payment payment, string clientId)
     {
-        Thread.Sleep(3000);
+        Thread.Sleep(2000);
 
         payment.PaymentId = Guid.NewGuid();
         _paymentService.SavePayment(clientId, payment);
